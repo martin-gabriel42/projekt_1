@@ -4,7 +4,6 @@ projekt_1.py: první projekt do Engeto Online Python Akademie
 author: Martin Gabriel
 email: gabmar@post.cz
 """
-#rewrite
     
 TEXTS = [
     '''Situated about 10 miles west of Kemmerer,
@@ -123,5 +122,3 @@ for length, occurence in sorted_lengths_of_words.items():
     line += (" " * (max_digits_of_length - len(str(length)))) + str(length) + "|"
     line += occurence * "*" + ((max_occurence - occurence + 5) * " ") + "|" + str(occurence)
     print(line)
-
-#\rewrite
