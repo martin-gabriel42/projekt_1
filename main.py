@@ -4,7 +4,7 @@ projekt_1.py: první projekt do Engeto Online Python Akademie
 author: Martin Gabriel
 email: gabmar@post.cz
 """
-    
+
 TEXTS = [
     '''Situated about 10 miles west of Kemmerer,
     Fossil Butte is a ruggedly impressive
@@ -89,12 +89,12 @@ if sum_of_numeric_strings == int(sum_of_numeric_strings):
 
 
 #printing the statistics
-print("There are ", number_of_words, " words in the selected text.")
-print("There are ", number_of_title_words, " titlecase words.")
-print("There are ", number_of_uppercase_words, " uppercase words.")
-print("There are ", number_of_lowercase_words, " lowercase words.")
-print("There are ", number_of_numeric_strings, " numeric strings.")
-print("The sum of all the numbers is ", sum_of_numeric_strings)
+print("There are ", number_of_words, " words in the selected text.", sep = "")
+print("There are ", number_of_title_words, " titles.", sep = "")
+print("There are ", number_of_uppercase_words, " uppercase words.", sep = "")
+print("There are ", number_of_lowercase_words, " lowercase words.", sep = "")
+print("There are ", number_of_numeric_strings, " numeric strings.", sep = "")
+print("The sum of all the numbers is ", sum_of_numeric_strings, ".", sep = "")
 
 print("----------------------------------------")
 
