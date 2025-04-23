@@ -42,6 +42,7 @@ registered_users = {
     }
 
 vertical_separator = "----------------------------------------"
+number_of_texts = len(TEXTS)
 
 #user verification
 username = input("username:")
@@ -50,7 +51,7 @@ password = input("password:")
 print(vertical_separator)
 
 if username in registered_users.keys() and registered_users[username] == password:
-    print("Welcome to the app,", username, "\nWe have 3 texts to be analyzed.")
+    print(f"Welcome to the app, {username}. \nWe have {number_of_texts} texts to be analyzed.")
 else:
     print("unregistered user, terminating the program..")
     quit()
@@ -59,12 +60,13 @@ print(vertical_separator)
 
 
 #text selection
-option = input("Enter a number btw. 1 and 3 to select: ")
+option = input(f"Enter a number btw. 1 and {number_of_texts} to select: ")
 
-if option not in ["1", "2", "3"]:
+if (option.isdecimal()) and (int(option) in range(1, number_of_texts + 1)):
+    text = TEXTS[int(option) - 1]
+else:
     print("nonexistent option, terminating the program.. ")
     quit()
-text = TEXTS[int(option) - 1]
 
 print(vertical_separator)
 
