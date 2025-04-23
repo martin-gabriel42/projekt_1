@@ -41,12 +41,13 @@ registered_users = {
     "liz" : "pass1230"
     }
 
-
+vertical_separator = "----------------------------------------"
 
 #user verification
 username = input("username:")
 password = input("password:")
-print("----------------------------------------")
+
+print(vertical_separator)
 
 if username in registered_users.keys() and registered_users[username] == password:
     print("Welcome to the app,", username, "\nWe have 3 texts to be analyzed.")
@@ -54,7 +55,7 @@ else:
     print("unregistered user, terminating the program..")
     quit()
 
-print("----------------------------------------")
+print(vertical_separator)
 
 
 #text selection
@@ -65,7 +66,7 @@ if option not in ["1", "2", "3"]:
     quit()
 text = TEXTS[int(option) - 1]
 
-print("----------------------------------------")
+print(vertical_separator)
 
 
 #text analysis
@@ -96,7 +97,7 @@ print("There are ", number_of_lowercase_words, " lowercase words.", sep = "")
 print("There are ", number_of_numeric_strings, " numeric strings.", sep = "")
 print("The sum of all the numbers is ", sum_of_numeric_strings, ".", sep = "")
 
-print("----------------------------------------")
+print(vertical_separator)
 
 
 #printing the graph
@@ -112,7 +113,8 @@ for word in list_of_words:
 
 sorted_lengths_of_words = {key: lengths_of_words[key] for key in sorted(lengths_of_words.keys())}
 print("LEN|  OCCURENCES|  NR.")
-print("----------------------------------------")
+
+print(vertical_separator)
 
 max_occurence = max(sorted_lengths_of_words.values())
 max_digits_of_length = len(str(max(sorted_lengths_of_words.keys())))
